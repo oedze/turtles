@@ -22,8 +22,8 @@ function saveLocation()
 end
 
 if fs.exists(locationFolder) then
-    file = fs.open(locationFolder, "r")
-    location = textutils.unserialize(fs.readAll())
+    local file = fs.open(locationFolder, "r")
+    location = textutils.unserialize(file.readAll())
     file.close()
 end
 
