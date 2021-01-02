@@ -1,6 +1,6 @@
 os.loadAPI('path.lua')
-local settingsFolder = "./oedzeturtle"
-local locationFolder = path.combine(settingsFolder, "location")
+settingsFolder = "./oedzeturtle"
+locationFolder = path.combine(settingsFolder, "location")
 
 --Direction, 0 = NOrth, 1 = East, 2 = Sout, 3= West
 local defaultLocation = {

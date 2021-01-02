@@ -4,7 +4,7 @@
 
 function combine (...)
     local combined = ""
-    for k, v in pairs(arg) do
+    for k, v in ipairs(arg) do
         if tonumber(k) > 1 then
             combined = combined .. "/"
         end
