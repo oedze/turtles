@@ -77,5 +77,9 @@ function turnLeft()
     mutateLocation(0, 0, -1)
 end
 
+function getLocation ()
+    return location
+end
+
 
 
