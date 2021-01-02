@@ -31,7 +31,7 @@ if fs.exists(locationFolder) then
     print("Location: ", location)
     file.close()
 else
-    print("Locationfolder doensn't exists, closing")
+    print("Locationfolder doensn't exists, creatingz    ")
     saveLocation()
 end
 
@@ -65,8 +65,8 @@ function forward()
     if success then mutateLocation(1, 0, 0) end
 end
 
-function backward()
-    local success = turtle.backward()
+function back()
+    local success = turtle.back()
     if success then mutateLocation(-1, 0, 0) end
 end
 
