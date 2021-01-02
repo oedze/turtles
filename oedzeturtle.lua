@@ -25,7 +25,10 @@ end
 if fs.exists(locationFolder) then
     print("locationfolder exists, getting location....")
     local file = fs.open(locationFolder, "r")
+    local x = file.readAll()
+    print("x", x)
     location = textutils.unserialize(file.readAll())
+    print("Location: ", location)
     file.close()
 else
     print("Locationfolder doensn't exists, closing")
