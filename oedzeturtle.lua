@@ -16,9 +16,9 @@ if not fs.exists(settingsFolder) then
 end
 
 function saveLocation()
-    fs.open(locationFolder, "w")
-    fs.write(textutils.serialize(location))
-    fs.close()
+    local file = fs.open(locationFolder, "w")
+    file.write(textutils.serialize(location))
+    file.close()
 end
 
 if fs.exists(locationFolder) then
