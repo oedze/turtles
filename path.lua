@@ -8,7 +8,7 @@ function combine (...)
         if k > 1 then
             combined = combined .. "/"
         end
-        combined = combined + v
+        combined = combined .. v
     end
     return combined
 end

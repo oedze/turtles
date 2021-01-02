@@ -1,4 +1,4 @@
-os.loadApi('path')
+os.loadAPI('path')
 local settingsFolder = "./oedzeturtle"
 local locationFolder = path.combine(settingsFolder, "location")
 
