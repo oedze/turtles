@@ -1,4 +1,4 @@
-os.loadAPI('path')
+os.loadAPI('path.lua')
 local settingsFolder = "./oedzeturtle"
 local locationFolder = path.combine(settingsFolder, "location")
 
