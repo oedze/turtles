@@ -1,5 +1,5 @@
 os.loadAPI('path.lua')
-settingsFolder = "./oedzeturtle"
+    settingsFolder = "./oedzeturtle"
 locationFolder = path.combine(settingsFolder, "location")
 
 --Direction, 0 = NOrth, 1 = East, 2 = Sout, 3= West
@@ -25,6 +25,8 @@ if fs.exists(locationFolder) then
     local file = fs.open(locationFolder, "r")
     location = textutils.unserialize(file.readAll())
     file.close()
+else
+    saveLocation()
 end
 
 function mutateLocation(localForwardDiff, localYDiff, localRotation)
