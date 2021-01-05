@@ -120,7 +120,7 @@ end
 function gotoX(xCoord)
     local currentX = turtle.getLocation().x
     local diff = xCoord - currentX
-    print("diff: "..diff)
+    moveX(diff)
 end
 
 function gotoZ(zCoord)
@@ -134,4 +134,29 @@ function gotoY(yCoord)
     local diff = yCoord - currentY
     moveY(diff)
 end
-j
+
+
+function goto(x, y, z, order, direction)
+    if not x or not y or not z or not order then
+        error("missing parameters, use : <x> <y> <z> <order> [direction]")
+    end
+    if #order ~= 3 then
+        print("order paramter shoul container only x, y, or z, each one")
+    end
+
+    for i=1,#order do
+        local direction = order:sub(i, i)
+        if(direction == "x") then
+            gotoX(x)
+        elseif(direction == "y") then
+            gotoY(y)
+        elseif(direction == "z") then
+            gotoZ(z)
+        else
+            error("unknown order type, only x, y, or z allowed")
+        end
+    end
+
+    if direction then turnTo(direction) end
+
+end
